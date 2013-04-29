@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.krl109.scheduler.R;
 import com.krl109.scheduler.db.TimeListDatabaseHelper;
+import com.krl109.scheduler.newSchedule.NewSchedule;
 
 public class ListScheduleView extends Activity implements
 OnItemClickListener {
@@ -35,25 +36,12 @@ OnItemClickListener {
 	TimePicker time_schedule;
 	String[] option_edit = {"Edit All", "Edit Recipient", "Edit Date and Time", "Edit Content"};
 	String sJwban;
-
-	public static final String[] titles = new String[] { "Strawberry",
-		"Banana", "Orange", "Mixed" };
-
-	public static final String[] descriptions = new String[] {
-		"It is an aggregate accessory fruit",
-		"It is the largest herbaceous flowering plant", "Citrus Fruit",
-	"Mixed Fruits" };
-
-	public static final String[] descriptions2 = new String[] {
-		"It is an aggregate accessory fruit",
-		"It is the largest herbaceous flowering plant", "Citrus Fruit",
-	"Mixed Fruits" };
-
-	public static final Integer[] images = { R.drawable.straw,
-		R.drawable.banana, R.drawable.orange, R.drawable.mixed };
+	
+	public static final Integer[] images = { R.drawable.schedule,
+		R.drawable.sent, R.drawable.paused, R.drawable.failed };
 
 	ListView listView;
-	List<RowItem> rowItems;
+	List<Schedule> schedule;
 	
 	
 
@@ -64,15 +52,15 @@ OnItemClickListener {
 		setContentView(R.layout.main_list_schedule);
 		helper = new TimeListDatabaseHelper(this);
 		Cursor cursor = helper.getScheduleList();
-		rowItems = new ArrayList<RowItem>();
+		schedule = new ArrayList<Schedule>();
 		if (cursor.moveToFirst())
 		{
-			int i = 0;
+//			int i = 0;
 			do{
 				cursor.getLong(1);
-				RowItem item = new RowItem(images[i], cursor.getString(2), cursor.getString(3), cursor.getString(4));
-				rowItems.add(item);
-				i++;
+				Schedule item = new Schedule(images[0], cursor.getString(2), cursor.getString(3), cursor.getString(4));
+				schedule.add(item);
+//				i++;
 			}while(cursor.moveToNext());
 		}
 		
@@ -84,7 +72,7 @@ OnItemClickListener {
 
 		listView = (ListView) findViewById(R.id.list);
 		CustomListViewAdapter adapter = new CustomListViewAdapter(this,
-				R.layout.list_item_schedule, rowItems);
+				R.layout.list_item_schedule, schedule);
 		registerForContextMenu(listView);
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(this);
@@ -94,7 +82,9 @@ OnItemClickListener {
 		{	
 			public void onClick(View v) 
 			{
-				Toast.makeText(getApplicationContext(), "schedule",Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "new schedule",Toast.LENGTH_SHORT).show();
+				Intent create_schedule = new Intent(ListScheduleView.this, NewSchedule.class);
+		    	startActivity(create_schedule);
 			}
 		});
 
@@ -104,7 +94,7 @@ OnItemClickListener {
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		Toast toast = Toast.makeText(getApplicationContext(),
-				"Item " + (position + 1) + ": " + rowItems.get(position),
+				"Item " + (position + 1) + ": " + schedule.get(position),
 				Toast.LENGTH_SHORT);
 		toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
 		toast.show();

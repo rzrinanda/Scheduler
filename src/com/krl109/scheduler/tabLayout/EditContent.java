@@ -1,11 +1,5 @@
 package com.krl109.scheduler.tabLayout;
 
-import com.krl109.scheduler.R;
-import com.krl109.scheduler.R.id;
-import com.krl109.scheduler.R.layout;
-import com.krl109.scheduler.main.MainActivity;
-import com.krl109.scheduler.template.Template;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,9 +8,13 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.widget.ImageButton;
+
+import com.krl109.scheduler.R;
+import com.krl109.scheduler.main.MainActivity;
+import com.krl109.scheduler.template.Template;
 
 public class EditContent extends Activity implements OnClickListener
 {

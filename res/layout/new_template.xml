@@ -45,7 +45,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Save" />
+        android:text="@string/button_save" />
 
     <View
         android:id="@+id/View01"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/View01"
         android:layout_alignTop="@+id/View01"
-        android:text="Cancel" />
+        android:text="@string/button_cancel" />
 
     <ImageButton
         android:id="@+id/btn_datetime"
@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignBottom="@+id/datetime"
-        android:layout_alignRight="@+id/spinner1"
+        android:layout_alignRight="@+id/freq_spinner"
         android:background="#66CDAA"
         android:src="@drawable/datetime" />
 
@@ -109,14 +109,15 @@
         android:id="@+id/datetime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinner1"
-        android:layout_below="@+id/spinner1"
+        android:layout_alignLeft="@+id/freq_spinner"
+        android:layout_below="@+id/freq_spinner"
+        android:layout_toLeftOf="@+id/btn_datetime"
         android:ems="10"
         android:hint="Date"
         android:textSize="13sp" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/freq_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView02"

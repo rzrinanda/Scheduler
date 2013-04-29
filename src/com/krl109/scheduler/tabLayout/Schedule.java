@@ -1,13 +1,13 @@
 package com.krl109.scheduler.tabLayout;
 
 
-public class RowItem {
+public class Schedule {
 	private int imageId;
 	private String dateTimeSch;
 	private String recipientNumbers;
 	private String contentMessages;
 
-	public RowItem(int imageId, String dateTime, String recipientNumbers, String contentMessages) {
+	public Schedule(int imageId, String dateTime, String recipientNumbers, String contentMessages) {
 		this.imageId = imageId;
 		this.dateTimeSch = dateTime;
 		this.recipientNumbers = recipientNumbers;

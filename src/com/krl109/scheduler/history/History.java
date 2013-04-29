@@ -1,14 +1,7 @@
 package com.krl109.scheduler.history;
 
-import com.krl109.scheduler.R;
-import com.krl109.scheduler.R.array;
-import com.krl109.scheduler.R.id;
-import com.krl109.scheduler.R.layout;
-import com.krl109.scheduler.R.menu;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,10 +10,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+
+import com.krl109.scheduler.R;
 
 public class History extends Activity implements OnItemClickListener 
 {

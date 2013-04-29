@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.krl109.scheduler.R;
 import com.krl109.scheduler.db.TimeListDatabaseHelper;
 import com.krl109.scheduler.main.MainActivity;
+import com.krl109.scheduler.tabLayout.TabLayout;
 import com.krl109.scheduler.template.Template;
 
 public class NewSchedule extends Activity implements OnClickListener
@@ -101,7 +102,8 @@ public class NewSchedule extends Activity implements OnClickListener
 				//Toast.makeText(getApplicationContext(), " TimeMilis" + dateTime, Toast.LENGTH_SHORT).show();
 				
 				Toast.makeText(getApplicationContext(), "Schedule saved", Toast.LENGTH_SHORT).show();
-				
+				Intent create_schedule = new Intent(NewSchedule.this, TabLayout.class);
+		    	startActivity(create_schedule);
 				
 			}
 		});

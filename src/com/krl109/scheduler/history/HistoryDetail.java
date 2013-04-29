@@ -1,11 +1,10 @@
 package com.krl109.scheduler.history;
 
-import com.krl109.scheduler.R;
-import com.krl109.scheduler.R.layout;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.krl109.scheduler.R;
 
 public class HistoryDetail extends Activity 
 {

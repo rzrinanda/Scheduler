@@ -2,8 +2,6 @@ package com.krl109.scheduler.db;
 
 import java.util.Calendar;
 
-import com.krl109.scheduler.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +11,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.krl109.scheduler.R;
 
 public class SchedulerActivity extends Activity {
     private TimeListDatabaseHelper databaseHelper;

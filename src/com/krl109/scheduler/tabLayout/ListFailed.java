@@ -1,24 +1,20 @@
 package com.krl109.scheduler.tabLayout;
 
-import com.krl109.scheduler.R;
-import com.krl109.scheduler.R.array;
-import com.krl109.scheduler.R.id;
-import com.krl109.scheduler.R.layout;
-import com.krl109.scheduler.R.menu;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.krl109.scheduler.R;
 
 public class ListFailed extends Activity 
 {

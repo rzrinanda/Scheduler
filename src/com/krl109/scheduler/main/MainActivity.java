@@ -76,25 +76,21 @@ public class MainActivity extends Activity {
 
 }*/
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import com.krl109.scheduler.R;
 import com.krl109.scheduler.carouselcontrols.Carousel;
 import com.krl109.scheduler.carouselcontrols.CarouselAdapter;
-import com.krl109.scheduler.carouselcontrols.CarouselItem;
 import com.krl109.scheduler.carouselcontrols.CarouselAdapter.OnItemClickListener;
-import com.krl109.scheduler.carouselcontrols.CarouselAdapter.OnItemSelectedListener;
+import com.krl109.scheduler.carouselcontrols.CarouselItem;
 import com.krl109.scheduler.history.History;
 import com.krl109.scheduler.newSchedule.NewSchedule;
 import com.krl109.scheduler.setting.Setting;
 import com.krl109.scheduler.tabLayout.TabLayout;
 import com.krl109.scheduler.template.Template;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.util.Log;
 
 public class MainActivity extends Activity 
 {

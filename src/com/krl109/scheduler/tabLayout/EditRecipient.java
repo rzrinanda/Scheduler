@@ -1,10 +1,5 @@
 package com.krl109.scheduler.tabLayout;
 
-import com.krl109.scheduler.R;
-import com.krl109.scheduler.R.id;
-import com.krl109.scheduler.R.layout;
-import com.krl109.scheduler.main.MainActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +7,12 @@ import android.provider.ContactsContract.Contacts;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.krl109.scheduler.R;
+import com.krl109.scheduler.main.MainActivity;
 
 public class EditRecipient extends Activity implements OnClickListener
 {
